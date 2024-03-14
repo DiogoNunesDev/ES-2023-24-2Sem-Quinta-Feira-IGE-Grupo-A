@@ -6,7 +6,7 @@
     align-items:center;
     justify-content: space-between;
     height: 100vh;
-    background: linear-gradient(to right, #0d47a1, #1976d2); /* Gradiente de azul */
+    background: linear-gradient(to bottom, #00A6FB, #000000); 
     color: white;
     padding: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
@@ -68,4 +68,29 @@
     height: 2px; /* Espessura da linha */
     background-color: #FFF; /* Cor da linha */
     margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+  }
+
+  .sidebar-button {
+    background: transparent; /* Cor de fundo transparente */
+    border: none; /* Remover borda */
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 50px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sidebar-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Branco transparente */
+  }
+  .sidebar-button:active {
+    background-color: rgba(255, 255, 255, 0.5); /* Branco transparente */
+  }
+  .sidebar-button:focus {
+    background-color: rgba(255, 255, 255, 0.5); /* Branco transparente */
+    outline: none; /* Remover a borda de foco */
   }
