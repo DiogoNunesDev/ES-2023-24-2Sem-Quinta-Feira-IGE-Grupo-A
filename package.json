@@ -1,0 +1,19 @@
+{
+  "name": "es-2023-24-2sem-quinta-feira-ige-grupo-a",
+  "version": "1.0.0",
+  "description": "- Diogo Nunes (104714) - Kevin Paresh (105587) - Vasco FIdanza (104748) - Tomás Ferreira (105472) - Tiago Linares (104800)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiogoNunesDev/ES-2023-24-2Sem-Quinta-Feira-IGE-Grupo-A.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiogoNunesDev/ES-2023-24-2Sem-Quinta-Feira-IGE-Grupo-A/issues"
+  },
+  "homepage": "https://github.com/DiogoNunesDev/ES-2023-24-2Sem-Quinta-Feira-IGE-Grupo-A#readme"
+}

@@ -1,0 +1,71 @@
+
+.sidebar-container {
+    display:flex;
+    flex-grow: 0.1;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(to right, #0d47a1, #1976d2); /* Gradiente de azul */
+    color: white;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* Sidebar stylling */
+  .sidebar-item {
+    margin: 10px 0;
+    text-decoration: none;
+    color: white; /* Cor do texto */
+    font-weight: bold;
+  }
+  
+  /* Mouse cover */
+  .sidebar-item:hover {
+    opacity: 0.7;
+  }
+  
+  
+  .sidebar-title {
+    margin-bottom: 50px;
+    font-size: 2em; 
+  }
+
+  .sidebar-button {
+    margin-bottom: 50px;
+    font-size: 1.5em; 
+  }
+
+  .sidebar-container-title {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0.2;
+  }
+
+  .sidebar-container-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 0.2;
+  }
+
+  .sidebar-container-upload {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0.2;
+  }
+
+  hr {
+    border: none;
+    height: 2px; /* Espessura da linha */
+    background-color: #FFF; /* Cor da linha */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+  }
