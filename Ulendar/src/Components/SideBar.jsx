@@ -1,5 +1,6 @@
 import React from 'react';
 import "../styles/SideBar.css";
+import Upload from "./FileUploader"
 function SideBar() {
   
   // Handler function for button click
@@ -43,9 +44,9 @@ function SideBar() {
         {/* Botão "Consultar Salas" */}
         <button className="sidebar-button" onClick={handleRoomConsultClick}>Consultar Salas</button>
     </div>
-    <div className="sidebar-container-upload">
+    <div className="sidebar-container-buttons">
       <div style={{height:'1px', width:'100%', backgroundColor:'white', marginBottom:'20px'}}></div>
-      <h1 className="sidebar-button">Upload horário</h1>
+      <Upload></Upload>
     </div>
     </div>
   )
