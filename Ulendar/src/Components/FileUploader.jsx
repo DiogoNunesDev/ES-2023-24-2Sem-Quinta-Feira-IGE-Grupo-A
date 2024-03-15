@@ -77,7 +77,7 @@ const FileUploader = () => {
   };
 
   return (
-    <div>
+    <div className='sidebar-container-buttons'>
       <button onClick={() => setOpen(true)} className="sidebar-button">Upload Horario</button>
       {open && (
         <div className="modal">
@@ -98,6 +98,7 @@ const FileUploader = () => {
               <br />
               <input 
                 className='input-element'
+                placeholder='document url'
                 type="text"
                 value={fileUrl}
                 onChange={(e) => setFileUrl(e.target.value)}

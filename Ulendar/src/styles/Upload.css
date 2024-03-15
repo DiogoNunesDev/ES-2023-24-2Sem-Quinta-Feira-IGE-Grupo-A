@@ -60,7 +60,8 @@
 }
 
 .input-element {
-  color: #333333;
+  background-color: #333333;
+  color: white;
   padding: 10px;
   font-size: 1em; 
   margin: 5px 0; 
@@ -70,5 +71,5 @@
 }
 
 .input-element::placeholder {
-  color:white; /* Lighter color for placeholder text */
+  color:white;
 }
