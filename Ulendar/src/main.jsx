@@ -5,6 +5,7 @@ import "./styles/index.css";
 import Dashboard from "./Routes/Dashboard";
 import SideBar from "./Components/SideBar";
 import LandingPage from "./Routes/LandingPage";
+import { GlobalProvider } from "./context/GlobalContext";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <GlobalProvider >
     <div style={{ display: "flex", flexDirection: "row", flex: 1 }}>
       <SideBar />
       <div
@@ -34,5 +36,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <RouterProvider router={router} style={{ flexGrow: 1 }} />
       </div>
     </div>
+    </GlobalProvider>
   </React.StrictMode>
 );
