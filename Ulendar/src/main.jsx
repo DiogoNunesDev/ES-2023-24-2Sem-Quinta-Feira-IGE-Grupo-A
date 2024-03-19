@@ -30,36 +30,41 @@ import Dashboard from "./Routes/Dashboard";
 import SideBar from "./Components/SideBar";
 import LandingPage from "./Routes/LandingPage";
 import { GlobalProvider } from "./context/GlobalContext";
+import Layout from "./Components/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard />,
+    Component: Layout,
+    children: [
+      {
+        path: "/",
+        Component: LandingPage,
+      },
+      {
+        path: "dashboard",  
+        Component: Dashboard,
+      },
+      {
+        path: "alterarAula",  
+        Component: LandingPage,
+      },
+      {
+        path: "alterarUC",  
+        Component: Dashboard,
+      },
+      {
+        path: "consultarSalas",  
+        Component: Dashboard,
+      },
+    ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <GlobalProvider >
-    <div style={{ display: "flex", flexDirection: "row", flex: 1 }}>
-      <SideBar />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          flex: 1,
-    
-        }}
-      >
-        {/* substituir div em baixo por componente header */}
-        <div style={{ height: 100,}}></div>
-        <RouterProvider router={router} style={{ flexGrow: 1 }} />
-      </div>
-    </div>
+       <RouterProvider router={router} />
     </GlobalProvider>
   </React.StrictMode>
 );

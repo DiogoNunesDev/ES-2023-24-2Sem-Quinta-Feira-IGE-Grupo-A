@@ -1,55 +1,100 @@
-import React from 'react';
+import React from "react";
 import "../styles/SideBar.css";
-import FileUploader from "./FileUploader"
+import FileUploader from "./FileUploader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendarDays,
+  faChalkboardUser,
+  faGraduationCap,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
+import Button from "./Button";
+import { NavLink } from "react-router-dom";
 function SideBar() {
-  
-  // Handler function for button click
-  const handleScheduleClick = () => {
-    // Aqui você pode adicionar a lógica para abrir a nova janela com o horário
-    console.log("O meu horário was clicked");
-  };
 
-  // Handler function for button click - "Alterar Aula"
-  const handleClassChangeClick = () => {
-    console.log("Alterar Aula was clicked");
-    // Adicione a lógica aqui para o botão "Alterar Aula"
-  };
 
-  // Handler function for button click - "Alterar UC"
-  const handleCourseChangeClick = () => {
-    console.log("Alterar UC was clicked");
-    // Adicione a lógica aqui para o botão "Alterar UC"
+  const btnStyle = {
+    paddingLeft: 25,
+    display: "flex",
+    gap: 15,
+    justifyContent: "flex-start",
+    alignItems: "center",
   };
-
-  // Handler function for button click - "Consultar Salas"
-  const handleRoomConsultClick = () => {
-    console.log("Consultar Salas was clicked");
-    // Adicione a lógica aqui para o botão "Consultar Salas"
-  };
-
 
   return (
-    <div  className="sidebar-container">
-    <div className="sidebar-container-title">
-      <h1 className="sidebar-title">ULendar</h1>
-      <div style={{height:'1px', width:'100%', backgroundColor:'white'}}></div>
+    <div className="container">
+      <div className="sidebarDiv">
+        <div className="titleDiv">
+          <h1 className="title">Ulendar</h1>
+        </div>
+        <div className="buttonsDiv">
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              isActive ? "btnActive" : "btn"
+            }
+          >
+            <Button
+              text={
+                <div style={btnStyle}>
+                  <FontAwesomeIcon icon={faCalendarDays} />O meu horário
+                </div>
+              }
+            />
+          </NavLink>
+          <NavLink
+            to="/alterarAula"
+            className={({ isActive }) =>
+              isActive ? "btnActive" : "btn"
+            }
+          >
+            <Button
+              text={
+                <div style={btnStyle}>
+                  <FontAwesomeIcon icon={faChalkboardUser} />
+                  Alterar aula
+                </div>
+              }
+            />
+          </NavLink>
+          <NavLink
+            to="/alterarUC"
+            className={({ isActive }) =>
+              isActive ? "btnActive" : "btn"
+            }
+          >
+            <Button
+              route="/"
+              text={
+                <div style={btnStyle}>
+                  <FontAwesomeIcon icon={faGraduationCap} />
+                  Alterar UC
+                </div>
+              }
+            />
+          </NavLink>
+          <NavLink
+            to="/consultarSalas"
+            className={({ isActive }) =>
+              isActive ? "btnActive" : "btn"
+            }
+          >
+            <Button
+              route="/"
+              text={
+                <div style={btnStyle}>
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  Consultar salas
+                </div>
+              }
+            />
+          </NavLink>
+        </div>
+        <div className="sidebarUploadDiv" />
+        <FileUploader />
+      </div>
     </div>
-    <div className="sidebar-container-buttons">
-      {/* Botão "O meu horário" */}
-      <button className="sidebar-button" onClick={handleScheduleClick}>O meu horário</button>
-        {/* Botão "Alterar Aula" */}
-        <button className="sidebar-button" onClick={handleClassChangeClick}>Alterar Aula</button>
-        {/* Botão "Alterar UC" */}
-        <button className="sidebar-button" onClick={handleCourseChangeClick}>Alterar UC</button>
-        {/* Botão "Consultar Salas" */}
-        <button className="sidebar-button" onClick={handleRoomConsultClick}>Consultar Salas</button>
-    </div>
-    <div className="sidebar-container-buttons">
-      <div style={{height:'1px', width:'100%', backgroundColor:'white', marginBottom:'20px'}}></div>
-      <FileUploader />
-    </div>
-    </div>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;

@@ -21,10 +21,13 @@ const FileUploader = () => {
 
   return (
     <>
-      <div onClick={() => setOpen(true)} className="uploadBtn">
-        <FontAwesomeIcon icon={faPlus} />
-        Upload Horario
+      <div className="uploadBtnContainer">
+        <div onClick={() => setOpen(true)} className="uploadBtn">
+          <FontAwesomeIcon icon={faPlus} />
+          Upload Horario
+        </div>
       </div>
+
       {open && (
         <div className="modal">
           <div className="modal-content">
@@ -46,7 +49,12 @@ const FileUploader = () => {
                 onChange={(e) => setFile(e.target.files[0])}
                 className="input-element"
               />
-              <button onClick={()=>{uploadFile(file)}} className="pop-up-button">
+              <button
+                onClick={() => {
+                  uploadFile(file);
+                }}
+                className="pop-up-button"
+              >
                 Upload Local
               </button>
             </div>
@@ -60,7 +68,9 @@ const FileUploader = () => {
                 onChange={(e) => setFileUrl(e.target.value)}
               />
               <button
-                onClick={()=>{uploadFile(fileUrl)}}
+                onClick={() => {
+                  uploadFile(fileUrl);
+                }}
                 className="pop-up-button"
                 disabled={!fileUrl}
               >
