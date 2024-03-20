@@ -22,12 +22,13 @@ export function csvToJson(csv) {
     for (let i = 1; i < lines.length; i++) {
         let obj = {};
         let currentline = lines[i].split(";");
-        if (currentline.length === headers.length) {
+        if (currentline.length === headers.length && !currentline.includes('')) {
             for (let j = 0; j < headers.length; j++) {
                 obj[headers[j].trim()] = currentline[j].trim();
             }
             result.push(obj);
         }
     }
+
     return JSON.stringify(result, null, 2);
 }

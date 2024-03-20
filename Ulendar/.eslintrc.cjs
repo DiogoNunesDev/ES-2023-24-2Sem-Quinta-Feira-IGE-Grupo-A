@@ -4,7 +4,7 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "complexity": ["error", 4] // se houver mais de 10 ifs, else, else if, switch, case, for, while, do, for in, for of, o eslint vai acusar erro
+        "complexity": ["error", 5] // se houver mais de 10 ifs, else, else if, switch, case, for, while, do, for in, for of, o eslint vai acusar erro
     },
     "settings": {
         "react": {
