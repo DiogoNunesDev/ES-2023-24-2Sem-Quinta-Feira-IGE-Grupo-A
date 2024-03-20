@@ -18,18 +18,26 @@
 
 }
 
+.uploadBtnContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:0.3;
+
+}
 .uploadBtn{
-  width: 80%;
   justify-content: center;
   display: flex;
   align-items: center;
   background-color: #00A6FB;
   border-radius: 15px;
+  flex-grow: 0.4;
   height: 50%;
   font-size: 1.5em;
   font-weight: 500;
   gap: 10px;
   flex-direction: row;
+  color:white;
 }
 .uploadBtn:hover {
   cursor: pointer;
