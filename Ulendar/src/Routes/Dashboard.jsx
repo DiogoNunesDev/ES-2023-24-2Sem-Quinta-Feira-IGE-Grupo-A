@@ -52,7 +52,7 @@ function Dashboard() {
   }, [horario]); // Re-run effect when `horario` changes
 
   return (
-    <div style={{ display: 'flex', flexGrow: 1 }}>
+    <div data-testid="dashboard" style={{ display: 'flex', flexGrow: 1 }}>
       <div ref={tableRef} style={{ width: '100%' }}></div>
     </div>
   );
