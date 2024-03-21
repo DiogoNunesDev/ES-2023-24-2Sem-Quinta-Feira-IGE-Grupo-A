@@ -183,9 +183,6 @@ function Dashboard() {
   };
   
   return (
-<<<<<<< HEAD
-    <div data-testid="dashboard" style={{ display: 'flex', flexGrow: 1 }}>
-=======
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <div style={{ marginBottom: '10px' }}>
         <button onClick={() => setFilterMode(prevMode => prevMode === "AND" ? "OR" : "AND")}>
@@ -203,7 +200,6 @@ function Dashboard() {
           Toggle Selected Column
         </button>
       </div>
->>>>>>> e1ce39492c9d639541bb286275fe185852e1f2f1
       <div ref={tableRef} style={{ width: '100%' }}></div>
     </div>
 

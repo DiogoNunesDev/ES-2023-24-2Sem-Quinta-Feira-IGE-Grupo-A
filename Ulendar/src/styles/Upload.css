@@ -1,102 +1,103 @@
-
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-  background: whitesmoke;
-  padding: 20px;
-  border-radius: 8px;
-
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.uploadBtnContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex:0.3;
+.uploadBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.3;
+}
 
+.uploadBtn {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #00A6FB;
+    border-radius: 15px;
+    flex-grow: 0.4;
+    height: 50%;
+    font-size: 1.5em;
+    font-weight: 500;
+    gap: 10px;
+    flex-direction: row;
+    color: white;
 }
-.uploadBtn{
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  background-color: #00A6FB;
-  border-radius: 15px;
-  flex-grow: 0.4;
-  height: 50%;
-  font-size: 1.5em;
-  font-weight: 500;
-  gap: 10px;
-  flex-direction: row;
-  color:white;
-}
+
 .uploadBtn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
 .upload-section {
-  margin-bottom: 20px;
-  color: black;
+    margin-bottom: 20px;
+    color: black;
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.pop-up-button{
-  border: none; /* Remover borda */
-  color:white;
-  background-color: #4A90E2;
-  font-size: 1em;
-  text-align: center;
-  width: 100%;
-  cursor: pointer;
-  display: block;
-  transition: background-color 0.3s ease;
-
+.pop-up-button {
+    border: none;
+    /* Remover borda */
+    color: white;
+    background-color: #4A90E2;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
 .pop-up-button:hover {
-  background-color: #6AA6D6; 
+    background-color: #6AA6D6;
 }
 
 .pop-up-button:active {
-  background-color: #398AD4; 
+    background-color: #398AD4;
 }
 
 .pop-up-button:focus {
-  background-color: #6AA6D6; 
-  outline: none; 
+    background-color: #6AA6D6;
+    outline: none;
 }
 
 .input-element {
-  background-color: #333333;
-  color: white;
-  padding: 10px;
-  font-size: 1em; 
-  margin: 5px 0; 
-  width: 100%;
-  border-radius: 8px;;
-  box-sizing: border-box; 
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 8px;
+    ;
+    box-sizing: border-box;
 }
 
 .input-element::placeholder {
-  color:white;
+    color: white;
 }
